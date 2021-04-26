@@ -6,7 +6,7 @@ const Login = () => {
 			<Content>
 				<CTA>
 					<CTALogoOne src='/assets/images/cta-logo-one.svg' alt='' />
-					<SignUp>Get Disney +</SignUp>
+					<SignUp>Sign Up Now</SignUp>
 					<Description>
 						This is not actually Disney +. This is a portfolio project to build a Disney
 						+ look-a-like using React, styled components, Redux, and Firebase. Disney,
