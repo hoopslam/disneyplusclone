@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const ImageSlider = (props) => {
+const ImageSlider = () => {
 	let settings = {
 		dots: true,
 		infinite: true,
@@ -72,11 +72,11 @@ const Carousel = styled(Slider)`
     }
 
     .slick-prev {
-        left: -75px;
+        left: 0;
     }
 
     .slick-next {
-        right: -75px;
+        right: 0;
     }
 `
 

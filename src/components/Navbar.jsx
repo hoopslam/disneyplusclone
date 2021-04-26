@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
 
-const Navbar = (props) => {
+const Navbar = () => {
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const userName = useSelector(selectUserName); // pulling select data out of store
