@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
+import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../redux/userSlice";
 
 const Navbar = () => {
 	const dispatch = useDispatch();
 	const history = useHistory();
-	const userName = useSelector(selectUserName); // pulling select data out of store
+	const userName = useSelector(selectUserName);
 	const userPhoto = useSelector(selectUserPhoto);
 
 	useEffect(() => {
@@ -41,6 +41,7 @@ const Navbar = () => {
 		}
 	};
 
+	//set User in redux store
 	const setUser = (user) => {
 		dispatch(
 			setUserLoginDetails({
