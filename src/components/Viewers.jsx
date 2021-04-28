@@ -48,7 +48,7 @@ const Container = styled.div`
     grid-template-columns: repeat(5, minmax( 0, 1fr));
 
     @media (max-width: 760px) {
-        grid-template-columns: repeat(1, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));
     }
 `
 

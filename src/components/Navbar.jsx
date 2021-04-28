@@ -11,6 +11,17 @@ const Navbar = () => {
 	const userName = useSelector(selectUserName);
 	const userPhoto = useSelector(selectUserPhoto);
 
+	//set User in redux store
+	const setUser = (user) => {
+		dispatch(
+			setUserLoginDetails({
+				name: user.displayName,
+				email: user.email,
+				photo: user.photoURL,
+			})
+		);
+	};
+
 	useEffect(() => {
 		//redirect logged in user to home page
 		auth.onAuthStateChanged(async (user) => {
@@ -41,17 +52,6 @@ const Navbar = () => {
 		}
 	};
 
-	//set User in redux store
-	const setUser = (user) => {
-		dispatch(
-			setUserLoginDetails({
-				name: user.displayName,
-				email: user.email,
-				photo: user.photoURL,
-			})
-		);
-	};
-
 	return (
 		<Nav>
 			<Logo>
@@ -67,25 +67,25 @@ const Navbar = () => {
 							<img src='/assets/images/home-icon.svg' alt='Home' />
 							<span>HOME</span>
 						</a>
-						<a href=''>
-							<img src='/assets/images/search-icon.svg' alt='Search' />
-							<span>SEARCH</span>
-						</a>
-						<a href=''>
+						<a href='/home'>
 							<img src='/assets/images/watchlist-icon.svg' alt='watchlist' />
 							<span>WATCHLIST</span>
 						</a>
-						<a href=''>
+						<a href='/home'>
 							<img src='/assets/images/original-icon.svg' alt='original' />
 							<span>ORIGINALS</span>
 						</a>
-						<a href=''>
+						<a href='/home'>
 							<img src='/assets/images/movie-icon.svg' alt='movies' />
 							<span>MOVIES</span>
 						</a>
-						<a href=''>
+						<a href='/home'>
 							<img src='/assets/images/series-icon.svg' alt='Series' />
 							<span>SERIES</span>
+						</a>
+						<a href='/home'>
+							<img src='/assets/images/search-icon.svg' alt='Search' />
+							<span>SEARCH</span>
 						</a>
 					</NavMenu>
 					<SignOut>

@@ -17,24 +17,24 @@ const ImageSlider = () => {
 		<div>
 			<Carousel {...settings}>
                 <Wrap>
-                    <a>
-                        <img src='/assets/images/slider-badging.jpg' alt=''/>
-                    </a>
+                    <div>
+                        <img src='/assets/images/slider-1.jpg' alt='slider1'/>
+                    </div>
                 </Wrap>
                 <Wrap>
-                    <a>
-                        <img src='/assets/images/slider-scale.jpg' alt=''/>
-                    </a>
+                    <div>
+                        <img src='/assets/images/slider-2.jpg' alt='slider2'/>
+                    </div>
                 </Wrap>
                 <Wrap>
-                    <a>
-                        <img src='/assets/images/slider-badag.jpg' alt=''/>
-                    </a>
+                    <div>
+                        <img src='/assets/images/slider-3.jpg' alt='slider3'/>
+                    </div>
                 </Wrap>
                 <Wrap>
-                    <a>
-                        <img src='/assets/images/slider-scales.jpg' alt=''/>
-                    </a>
+                    <div>
+                        <img src='/assets/images/slider-4.jpg' alt='slider4'/>
+                    </div>
                 </Wrap>
             </Carousel>
 		</div>
@@ -47,7 +47,7 @@ const Carousel = styled(Slider)`
     & > button {
         opacity: 0;
         height: 100%;
-        width: 5vw;
+        width: 50%;
         z-index: 1;
 
         &:hover {
@@ -72,12 +72,13 @@ const Carousel = styled(Slider)`
     }
 
     .slick-prev {
-        left: 0;
+        left: -20%;
     }
 
     .slick-next {
-        right: 0;
+        right: -20%;
     }
+
 `
 
 const Wrap = styled.div`
@@ -85,7 +86,7 @@ const Wrap = styled.div`
     cursor: pointer;
     position: relative;
 
-    a{
+    div{
         border-radius: 4px;
         box-shadow: rgb( 0 0 0 / 69%) 0px 26px 30px --10px, rgb(0 0 0 / 73%) 0px 16px 19px --10px;
         cursor: pointer;
@@ -96,6 +97,8 @@ const Wrap = styled.div`
         img {
             width: 100%;
             height: 100%;
+            min-height: 300px;
+            object-fit: cover;
         }
 
         &:hover {

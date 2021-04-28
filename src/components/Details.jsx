@@ -26,11 +26,11 @@ const Details = () => {
 	return (
 		<Container>
 			<Background>
-                {console.log(detailData)}
+				{console.log(detailData)}
 				<img alt={detailData.title} src={detailData.backgroundImg} />
 			</Background>
 			<ImageTitle>
-				<img alt={detailData.title} src={detailData.imageTitle} />
+				<img alt={detailData.title} src={detailData.titleImg} />
 			</ImageTitle>
 			<ContentMeta>
 				<Controls>
@@ -79,10 +79,11 @@ const Background = styled.div`
 	img {
 		width: 100vw;
 		height: 100vh;
+		object-fit: cover;
 
-		@media (max-width: 760px) {
+		/* @media (max-width: 760px) {
 			width: initial;
-		}
+		} */
 	}
 `;
 

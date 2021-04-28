@@ -18,9 +18,9 @@ const Home = () => {
 	const dispatch = useDispatch();
 	const userName = useSelector(selectUserName);
 	let recommends = [];
-	let newDisneys = [];
-	let originals = [];
-	let trending = [];
+		let newDisneys = [];
+		let originals = [];
+		let trending = [];
 
 	//on user login
 	useEffect(() => {
@@ -29,7 +29,7 @@ const Home = () => {
 			snapshot.docs.map((doc) => {
 				switch (doc.data().type) {
 					case "recommend":
-						recommends = [...recommends, { id: doc.id, ...doc.data() }];
+						dispatch(setMovies({recommend: recommends}));
 						break;
 					case "new":
 						newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }];
@@ -39,6 +39,9 @@ const Home = () => {
 						break;
 					case "trending":
 						trending = [...trending, { id: doc.id, ...doc.data() }];
+						break;
+					default:
+						console.log("no such data");
 						break;
 				}
 			});
