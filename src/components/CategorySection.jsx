@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import {selectRecommend} from "../redux/movieSlice";
 
 const CategorySection = ({title, selector}) => {
 	const movies = useSelector(selector);
@@ -14,7 +13,7 @@ const CategorySection = ({title, selector}) => {
 					movies.map((movie, key) => (
 						<Wrap key={key}>
 							{movie.id}
-							<Link to={`/detail/` + movie.id}>
+							<Link to={`/details/` + movie.id}>
 								<img src={movie.cardImg} alt={movie.title} />
 							</Link>
 						</Wrap>
