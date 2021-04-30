@@ -6,12 +6,9 @@ const Login = () => {
 			<Content>
 				<CTA>
 					<CTALogoOne src='/assets/images/cta-logo-one.svg' alt='' />
-					<SignUp>Sign Up Now</SignUp>
 					<Description>
-						This is not actually Disney +. This is a portfolio project to build a Disney
-						+ look-a-like using React, styled components, Redux, and Firebase. Disney,
-						if you're looking, my gf and I are really really looking forward to getting
-						Disney + once it's available in South Korea.
+						<strong>Disclaimer: </strong>This is not actually Disney +. This is a portfolio project to build a Disney
+						+ look-a-like using React, styled components, Redux, and Firebase. Log in with your google account and take a look!
 					</Description>
                     <CTALogoTwo src="/assets/images/cta-logo-two.png" alt="" />
 				</CTA>
@@ -73,27 +70,9 @@ const CTALogoOne = styled.img`
 	width: 100%;
 `;
 
-const SignUp = styled.a`
-	font-weight: bold;
-	color: #f9f9f9;
-	background-color: #0063e5;
-	margin-bottom: 12px;
-	width: 100%;
-	letter-spacing: 1.5px;
-	font-size: 18px;
-	padding: 16.5px 0;
-	border: 1px solid transparent;
-	border-radius: 4px;
-
-	&:hover {
-		background-color: #0483ee;
-		cursor: pointer;
-	}
-`;
-
 const Description = styled.p`
 	color: hsla(0, 0, 95.3%, 1);
-	font-size: 11px;
+	font-size: .85rem;
 	margin: 0 0 24px;
 	line-height: 1.5;
 	letter-spacing: 1.5px;

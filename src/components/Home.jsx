@@ -17,19 +17,19 @@ import {
 const Home = () => {
 	const dispatch = useDispatch();
 	const userName = useSelector(selectUserName);
-	let recommends = [];
-		let newDisneys = [];
-		let originals = [];
-		let trending = [];
 
 	//on user login
 	useEffect(() => {
+		let recommends = [];
+		let newDisneys = [];
+		let originals = [];
+		let trending = [];
 		//fetch data from firestore
 		db.collection("movies").onSnapshot((snapshot) => {
-			snapshot.docs.map((doc) => {
+			snapshot.docs.forEach((doc) => {
 				switch (doc.data().type) {
 					case "recommend":
-						dispatch(setMovies({recommend: recommends}));
+						recommends = [...recommends, { id: doc.id, ...doc.data() }];
 						break;
 					case "new":
 						newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }];
