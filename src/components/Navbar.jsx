@@ -261,7 +261,6 @@ const Hamburger = styled.div`
 	display: none;
 	width: 70px;
 	height: 70px;
-	display: flex;
 	cursor: pointer;
 	justify-content: center;
 	align-items: center;
